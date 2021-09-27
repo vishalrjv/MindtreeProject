@@ -1,0 +1,14 @@
+<li *ngIf="loggedIn()" class="nav-item ">
+            <a class="nav-link sp" (click)="onLogout()">Logout</a>
+          </li>
+
+
+
+		  <div *ngIf="loggedIn()" class="dropdown mr-5 " dropdown>
+            <a href="#" class="dropdown-toggle text-light" dropdownToggle (click)="false">Welcome {{loggedinuser}}</a>
+            <div class="dropdown-menu" *dropdownMenu>
+              <a href="#" class="dropdown-item" >View Dashboard</a>
+              <a href="#" class="dropdown-item">View Dashboard</a>
+            <a class="dropdown-item" (click)="onLogout()">Logout</a>
+            </div>
+          </div>

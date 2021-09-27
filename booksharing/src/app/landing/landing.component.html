@@ -1,0 +1,49 @@
+<!-- <div class="container">
+<div class="row">
+
+    <div class="card des " >
+       
+        <img class="propImg" src="assets/images/download.jfif">
+        <div class="card-body">
+       <h5> {{Property.AuthorName}} </h5>
+       <h5>{{Property.Price}}</h5> 
+        <h5>{{Property.BookName}}</h5>
+        <h6>{{Property.Category}}</h6>
+    </div> 
+           </div>
+           <div class="card des" >
+       
+            <img class="propImg" src="assets/images/download.jfif">
+            <div class="card-body">
+           <h5> {{Property.AuthorName}} </h5>
+           <h5>{{Property.Price}}</h5> 
+            <h5>{{Property.BookName}}</h5>
+            <h6>{{Property.Category}}</h6>
+        </div> 
+               </div>
+   </div>
+
+</div> -->
+<main>
+    <!-- <form (ngSubmit)="OnSubmit()">
+        <button type="submit" >Check</button>
+    </form> -->
+    <div *ngFor="let p of Properties" class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
+        <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
+            <div class="col">
+                <div class="card h-100 shadow-sm"> <img src="assets/images/download.jfif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-primary">{{p.category}}</span> <span class="float-end price-hp">{{p.price}}</span> </div>
+                        <h5 class="card-title">{{p.authorName}}-{{p.bookName}}</h5>
+                        <div class="text-center my-4"> <button class="btn btn-primary"  (click)=addtocart(p)>Add To Cart</button> </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</main>
+
+<!-- <div *ngFor="let p of Properties">
+    <h3>{{p.authorName}}</h3>
+</div> -->
